@@ -23,12 +23,11 @@ func main() {
 		},
 	}
 
-	jimPointer := &jim
-	jimPointer.updateName("jimmy")
-
+	jim.updateName("jimmy")
 	jim.print()
 }
 
+// This function takes a pointer to a person as receiver.
 func (pointerToPerson *person) updateName(newFirstName string) {
 	(*pointerToPerson).firstName = newFirstName
 }
@@ -42,3 +41,6 @@ func (p person) print() {
 // When you are defining multiline structures, every single line must end with a comma.
 // RAM is like a bunch of slots/boxes, each one of which has a discrete address.
 // Go is a 'pass by value' language.
+
+// &variable -> get the memory address of the value this variable is pointing at.
+// *pointer  -> get the value this memory address is pointing at.
